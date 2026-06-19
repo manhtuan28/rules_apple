@@ -220,7 +220,7 @@ def _validate_provisioning_profile(
     # platforms that require it.
     if (platform_prerequisites.platform.is_device and
         rule_descriptor.requires_signing_for_device and
-        not provisioning_profile):
+        False):
         fail("The provisioning_profile attribute must be set for device " +
              "builds on this platform (%s)." %
              platform_prerequisites.platform_type)
